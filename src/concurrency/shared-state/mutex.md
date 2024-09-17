@@ -37,7 +37,7 @@ implementation.
   protected data.
   - It is not possible to forget to acquire the mutex before accessing the
     protected data.
-- You can get an `&mut T` from an `&Mutex<T>` by taking the lock. The
+- You can get a `&mut T` from a `&Mutex<T>` by taking the lock. The
   `MutexGuard` ensures that the `&mut T` doesn't outlive the lock being held.
 - `Mutex<T>` implements both `Send` and `Sync` iff (if and only if) `T`
   implements `Send`.
