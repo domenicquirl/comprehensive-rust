@@ -1,5 +1,3 @@
-<!-- i18n:comment Please keep { #glossary } untranslated. -->
-
 # Glossary { #glossary }
 
 The following is a glossary which aims to give a short definition of many Rust
@@ -23,10 +21,6 @@ h1#glossary ~ ul > li:first-line {
     font-weight: bold;
 }
 </style>
-
-<!-- i18n:comment Please add the English term in italic after your -->
-<!-- i18n:comment translated term. Also, please keep the hard line -->
-<!-- i18n:comment breaks to ensure a nice formatting. -->
 
 - allocate:\
   Dynamic memory allocation on [the heap](memory-management/review.md).
@@ -147,10 +141,6 @@ h1#glossary ~ ul > li:first-line {
   concurrency.
 - Rust Fundamentals:\
   Days 1 to 4 of this course.
-- Rust in Android:\
-  See [Rust in Android](android.md).
-- Rust in Chromium:\
-  See [Rust in Chromium](chromium.md).
 - safe:\
   Refers to code that adheres to Rust's ownership and borrowing rules,
   preventing memory-related errors.
