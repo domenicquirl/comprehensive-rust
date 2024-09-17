@@ -17,8 +17,8 @@ to install to different compiler versions.
 After installing Rust, you should configure your editor or IDE to work with
 Rust. Most editors do this by talking to [rust-analyzer], which provides
 auto-completion and jump-to-definition functionality for [VS Code], [Emacs],
-[Vim/Neovim], and many others. There is also a different IDE available called
-[RustRover].
+[Vim/Neovim], [Helix], and many others. There is also a proprietary IDE from 
+JetBrains called [RustRover].
 
 <details>
 
@@ -40,5 +40,6 @@ auto-completion and jump-to-definition functionality for [VS Code], [Emacs],
 [VS Code]: https://code.visualstudio.com/
 [Emacs]: https://rust-analyzer.github.io/manual.html#emacs
 [Vim/Neovim]: https://rust-analyzer.github.io/manual.html#vimneovim
+[Helix]: https://helix-editor.com/
 [RustRover]: https://www.jetbrains.com/rust/
 [Rust formatter]: https://github.com/rust-lang/rustfmt
