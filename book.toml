@@ -23,6 +23,7 @@ smart-punctuation = true
 additional-js = [
   "theme/speaker-notes.js",
   "theme/instructor-menu.js",
+  "theme/redbox.js",
 ]
 additional-css = [
   "theme/css/svgbob.css",
