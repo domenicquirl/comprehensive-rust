@@ -26,6 +26,7 @@ fn main() {
         Ok(count) => println!("Count: {count}"),
         Err(err) => println!("Error: {err}"),
     }
+    fs::remove_file("count.dat").unwrap();
 }
 ```
 
