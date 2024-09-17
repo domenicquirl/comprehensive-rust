@@ -25,6 +25,9 @@ fn main() {
 }
 ```
 
+> Channel functionality is limited in the standard library.
+> For _multiple-producer **multiple**-consumer_ channels and other concurrent utilities, check out the [`crossbeam`](https://docs.rs/crossbeam/latest/crossbeam/index.html) crate.
+
 <details>
 
 - `mpsc` stands for Multi-Producer, Single-Consumer. `Sender` and `SyncSender`
