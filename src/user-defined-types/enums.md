@@ -23,7 +23,7 @@ enum PlayerMove {
 
 fn main() {
     let m: PlayerMove = PlayerMove::Run(Direction::Left);
-    println!("On this turn: {:?}", m);
+    println!("On this turn: {m:?}");
 }
 ```
 

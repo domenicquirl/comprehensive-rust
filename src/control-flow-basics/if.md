@@ -28,7 +28,7 @@ block becomes the value of the `if` expression:
 fn main() {
     let x = 10;
     let size = if x < 20 { "small" } else { "large" };
-    println!("number size: {}", size);
+    println!("number size: {size}");
 }
 ```
 

@@ -70,7 +70,7 @@ fn main() {
         swap(&mut a, &mut b);
     }
 
-    println!("a = {}, b = {}", a, b);
+    println!("a = {a}, b = {b}");
 }
 ```
 

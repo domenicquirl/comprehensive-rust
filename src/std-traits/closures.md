@@ -68,7 +68,7 @@ exclusive reference, then by move). The `move` keyword forces capture by value.
 
 ```rust,editable
 fn make_greeter(prefix: String) -> impl Fn(&str) {
-    return move |name| println!("{} {}", prefix, name);
+    return move |name| println!("{prefix} {name}");
 }
 
 fn main() {
