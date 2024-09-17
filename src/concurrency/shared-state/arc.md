@@ -21,8 +21,11 @@ fn main() {
         }));
     }
 
-    handles.into_iter().for_each(|h| h.join().unwrap());
+    for handle in handles {
+        handle.join().unwrap();
+    }
     println!("v: {v:?}");
+    let v = Arc::new(vec![10, 20, 30]);
 }
 ```
 
