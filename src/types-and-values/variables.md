@@ -19,7 +19,10 @@ fn main() {
 <details>
 
 - Uncomment the `x = 20` to demonstrate that variables are immutable by default.
-  Add the `mut` keyword to allow changes.
+  Before adding the `mut` keyword to allow changes, make sure to point out that 
+  the error message already suggests this and that Rust's compiler messages are
+  in general very good and almost always worth reading because they will help 
+  you out.
 
 - The `i32` here is the type of the variable. This must be known at compile
   time, but type inference (covered later) allows the programmer to omit it in

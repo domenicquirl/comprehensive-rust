@@ -22,3 +22,9 @@ fn main() {
     println!("Final x: {x}");
 }
 ```
+
+<details>
+
+Note that integer division [rounds towards 0](https://doc.rust-lang.org/stable/reference/expressions/operator-expr.html#arithmetic-and-logical-binary-operators).
+
+</details>

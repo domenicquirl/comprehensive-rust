@@ -4,14 +4,15 @@ minutes: 2
 
 # Macros
 
-Macros are expanded into Rust code during compilation, and can take a variable
-number of arguments. They are distinguished by a `!` at the end. The Rust
-standard library includes an assortment of useful macros.
+Macros are like functions that expand into Rust code during compilation, 
+and can take a variable number of arguments. They are distinguished by a 
+`!` at the end. The Rust standard library includes an assortment of useful 
+macros.
 
-- `println!(format, ..)` prints a line to standard output, applying formatting
-  described in [`std::fmt`](https://doc.rust-lang.org/std/fmt/index.html).
-- `format!(format, ..)` works just like `println!` but returns the result as a
-  string.
+- `println!("Output: {variable} is {}", value)` prints a line to standard output, 
+  applying formatting described in [`std::fmt`](https://doc.rust-lang.org/std/fmt/index.html).
+- `format!("Output: {variable} is {}", value)` works just like `println!` but 
+  returns the result as a string.
 - `dbg!(expression)` logs the value of the expression and returns it.
 - `todo!()` marks a bit of code as not-yet-implemented. If executed, it will
   panic.

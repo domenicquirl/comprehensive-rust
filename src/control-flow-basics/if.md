@@ -36,7 +36,8 @@ fn main() {
 
 Because `if` is an expression and must have a particular type, both of its
 branch blocks must have the same type. Show what happens if you add `;` after
-`"small"` in the second example.
+`"small"` in the second example. Explain that `()` is Rust's _unit type_ and
+that it's the type of all statements that end with `;`.
 
 An `if` expression should be used in the same way as the other expressions. For
 example, when it is used in a `let` statement, the statement must be terminated

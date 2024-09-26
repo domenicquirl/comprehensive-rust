@@ -26,6 +26,8 @@ If the last expression ends with `;`, then the resulting value and type is `()`.
 
 <details>
 
+- Take note of the `;` after the closing `}` of the block. The entire `let
+  statement is still a variable assignment with the block as its value.
 - You can show how the value of the block changes by changing the last line in
   the block. For instance, adding/removing a semicolon or using a `return`.
 

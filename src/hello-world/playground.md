@@ -21,6 +21,10 @@ few handy features:
 
 <details>
 
+Regarding profiles, most of the profile-specific settings can be overridden / configured in your own
+projects. Mention this in particular for embedded projects, where one might want to optimize the
+size of the resulting executable even in debug builds, but keep debugging information around.
+
 As students head into the break, encourage them to open up the playground and
 experiment a little. Encourage them to keep the tab open and try things out
 during the rest of the course. This is particularly helpful for advanced
