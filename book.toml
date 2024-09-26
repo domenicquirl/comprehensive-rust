@@ -21,14 +21,14 @@ verbose = false # Report timing information.
 [output.html]
 smart-punctuation = true
 additional-js = [
-  "theme/speaker-notes.js",
-  "theme/instructor-menu.js",
-  "theme/redbox.js",
+    "theme/speaker-notes.js",
+    "theme/instructor-menu.js",
+    "theme/redbox.js",
 ]
 additional-css = [
-  "theme/css/svgbob.css",
-  "theme/css/redbox.css",
-  "theme/css/speaker-notes.css",
+    "theme/css/svgbob.css",
+    "theme/css/redbox.css",
+    "theme/css/speaker-notes.css",
 ]
 git-repository-url = "https://github.com/domenicquirl/comprehensive-rust"
 git-repository-icon = "fa-code-fork"
@@ -144,8 +144,6 @@ use-boolean-and = true
 "exercises/day-3/simple-gui.html"                      = "../../methods-and-traits/exercise.html"
 "exercises/day-3/simples-gui.html"                     = "simple-gui.html"
 "exercises/day-3/soluções-tarde.html"                  = "solutions-afternoon.html"
-"exercises/day-4/afternoon.html"                       = "../android/morning.html"
-"exercises/day-4/android.html"                         = "../android/morning.html"
 "exercises/day-4/dining-philosophers.html"             = "../concurrency/dining-philosophers.html"
 "exercises/day-4/elevator.html"                        = "../concurrency/elevator.html"
 "exercises/day-4/link-checker.html"                    = "../concurrency/link-checker.html"
@@ -207,9 +205,7 @@ use-boolean-and = true
 "structs/tuple-structs.html"                           = "../user-defined-types/tuple-structs.html"
 "structure.html"                                       = "running-the-course/course-structure.html"
 "testing/doc-tests.html"                               = "../testing/other.html"
-"testing/googletest.html"                              = "../android/testing/googletest.html"
 "testing/integration-tests.html"                       = "../testing/other.html"
-"testing/mockall.html"                                 = "../android/testing/mockall.html"
 "testing/useful-crates.html"                           = "../testing.html"
 "traits/closures.html"                                 = "../std-traits/closures.html"
 "traits/default.html"                                  = "../std-traits/default.html"
@@ -256,7 +252,7 @@ output-directory = "comprehensive-rust-exercises"
 optional = true
 follow-web-links = false # change to true to check web links
 exclude = [
-  "comprehensive-rust.pdf",
-  "comprehensive-rust-exercises.zip",
-  # "crates.io", # uncomment when follow-web-links is true
+    "comprehensive-rust.pdf",
+    "comprehensive-rust-exercises.zip",
+    # "crates.io", # uncomment when follow-web-links is true
 ]

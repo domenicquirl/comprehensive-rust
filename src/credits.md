@@ -22,9 +22,3 @@ Some exercises have been copied and adapted from
 [Rust on Exercism](https://exercism.org/tracks/rust). Please see the
 `third_party/rust-on-exercism/` directory for details, including the license
 terms.
-
-## CXX
-
-The [Interoperability with C++](android/interoperability/cpp.md) section uses an
-image from [CXX](https://cxx.rs/). Please see the `third_party/cxx/` directory
-for details, including the license terms.
