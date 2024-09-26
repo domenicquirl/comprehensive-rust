@@ -151,13 +151,6 @@ function playground_text(playground, hidden = true) {
         })
         .then(response => response.json())
         .then(response => {
-            const endTime = window.performance.now();
-            gtag("event", "playground", {
-                "modified": playgroundModified,
-                "error": (response.error == null) ? null : 'compilation_error',
-                "latency": (endTime - startTime) / 1000,
-            });
-
             if (response.result.trim() === '') {
                 result_block.innerText = "No output";
                 result_block.classList.add("result-no-output");
@@ -167,12 +160,6 @@ function playground_text(playground, hidden = true) {
             }
         })
         .catch(error => {
-            const endTime = window.performance.now();
-            gtag("event", "playground", {
-                "modified": playgroundModified,
-                "error": error.message,
-                "latency": (endTime - startTime) / 1000,
-            });
             result_block.innerText = "Playground Communication: " + error.message
         });
     }
