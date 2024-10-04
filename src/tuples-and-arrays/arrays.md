@@ -1,10 +1,8 @@
 ---
-minutes: 5
+minutes: 7
 ---
 
 # Arrays
-
-<!-- mdbook-xgettext: skip -->
 
 ```rust,editable
 fn main() {
@@ -23,8 +21,15 @@ fn main() {
   later.
 
 - Try accessing an out-of-bounds array element. Array accesses are checked at
-  runtime. Rust can usually optimize these checks away, and they can be avoided
-  using unsafe Rust.
+  runtime, but if the compiler can see that the access is out of bounds at 
+  compile-time, it will produce an error when compiling the program. 
+
+  Instead of using a constant index, try calling a function to obtain the index.
+  Note that this function will return `usize`, which is the integer type used
+  for indexing in Rust.
+  
+- Rust can usually optimize bounds checks away, and they can be avoided using 
+  unsafe Rust.
 
 - We can use literals to assign values to arrays.
 

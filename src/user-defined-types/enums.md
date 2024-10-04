@@ -1,11 +1,24 @@
 ---
-minutes: 5
+minutes: 10
 ---
 
 # Enums
 
 The `enum` keyword allows the creation of a type which has a few different
 variants:
+
+```rust,editable
+#[derive(Debug)]
+enum Direction {
+    Left,
+    Right,
+}
+```
+
+A variant may be accessed through its _path_, which is the `enum` name, followed 
+by 2 colons, followed by the name of the variant: `Direction::Left`.
+
+In Rust, `enum` variants may carry additional data depending on the variant:
 
 ```rust,editable
 #[derive(Debug)]

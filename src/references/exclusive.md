@@ -5,9 +5,8 @@ minutes: 10
 # Exclusive References
 
 Exclusive references, also known as mutable references, allow changing the value
-they refer to. They have type `&mut T`.
-
-<!-- mdbook-xgettext: skip -->
+they refer to. They have type `&mut T`. There can only be one exclusive reference
+to the same value at any time.
 
 ```rust,editable
 fn main() {

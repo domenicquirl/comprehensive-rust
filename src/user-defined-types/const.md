@@ -12,7 +12,8 @@ const ZERO: Option<u8> = Some(42);
 fn compute_digest(text: &str) -> [u8; DIGEST_SIZE] {
     let mut digest = [ZERO.unwrap_or(0); DIGEST_SIZE];
     for (idx, &b) in text.as_bytes().iter().enumerate() {
-        digest[idx % DIGEST_SIZE] = digest[idx % DIGEST_SIZE].wrapping_add(b);
+        digest[idx % DIGEST_SIZE] = 
+            digest[idx % DIGEST_SIZE].wrapping_add(b);
     }
     digest
 }
@@ -30,7 +31,9 @@ values. `const` functions can however be called at runtime.
 
 <details>
 
-- Mention that `const` behaves semantically similar to C++'s `constexpr`
+- Mention that `const` behaves semantically similar to C++'s `constexpr`, that is, 
+  Rust `const` values can be used both at compile-time and at runtime, as opposed
+  to C++'s `consteval`, which _forces_ compile-time evaluation.
 - It isn't super common that one would need a runtime evaluated constant, but it
   is helpful and safer than using a static.
 

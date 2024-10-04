@@ -16,14 +16,17 @@ fn main() {
 ```
 
 As noted in the [Rust RFC Book][1], these are not inlined upon use and have an
-actual associated memory location. This is useful for unsafe and embedded code,
-and the variable lives through the entirety of the program execution. When a
-globally-scoped value does not have a reason to need object identity, `const` is
-generally preferred.
+actual associated memory location, meaning you can take references to `static`s
+and a `static` may have it's own state (such as a `Mutex`). This is useful for
+unsafe and embedded code, and the variable lives through the entirety of the 
+program execution. When a globally-scoped value does not have a reason to need
+object identity, `const` is generally preferred.
 
 <details>
 
-- `static` is similar to mutable global variables in C++.
+- `static` is similar to mutable global variables in C++, though by default 
+  `static`s in Rust are immutable (define a mutable `static` with `static mut`,
+  but that requires `unsafe`).
 - `static` provides object identity: an address in memory and state as required
   by types with interior mutability such as `Mutex<T>`.
 

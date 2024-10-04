@@ -9,7 +9,7 @@ extract the inner values into local variables. This can be done manually by
 directly accessing the inner values:
 
 ```rust,editable
-fn print_tuple(tuple: (i32, i32)) {
+fn print_tuple(tuple: (i32, u32)) {
     let left = tuple.0;
     let right = tuple.1;
     println!("left: {left}, right: {right}");
@@ -20,9 +20,21 @@ However, Rust also supports using pattern matching to destructure a larger value
 into its constituent parts:
 
 ```rust,editable
-fn print_tuple(tuple: (i32, i32)) {
+fn print_tuple(tuple: (i32, u32)) {
     let (left, right) = tuple;
     println!("left: {left}, right: {right}");
+}
+```
+
+You can even destructure function arguments like this:
+
+```rust,editable
+fn print_tuple((left, right): (i32, u32)) {
+    println!("left: {left}, right: {right}");
+}
+
+fn main() {
+    print_tuple((-2, 3));
 }
 ```
 

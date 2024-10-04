@@ -1,5 +1,5 @@
 ---
-minutes: 10
+minutes: 5
 ---
 
 # Named Structs
@@ -17,18 +17,26 @@ fn describe(person: &Person) {
 }
 
 fn main() {
-    let mut peter = Person { name: String::from("Peter"), age: 27 };
+    let mut peter = Person { 
+      name: String::from("Peter"), 
+      age: 27 
+    };
     describe(&peter);
 
     peter.age = 28;
     describe(&peter);
 
+    // "matching names" shorthand
     let name = String::from("Avery");
     let age = 39;
     let avery = Person { name, age };
     describe(&avery);
 
-    let jackie = Person { name: String::from("Jackie"), ..avery };
+    // "record update syntax"
+    let jackie = Person { 
+      name: String::from("Jackie"), 
+      ..avery // other fields "like" avery
+    };
     describe(&jackie);
 }
 ```

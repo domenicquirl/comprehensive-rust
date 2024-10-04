@@ -10,8 +10,8 @@ Including `&str` as a way of representing a slice of valid utf-8
 
 We can now understand the two string types in Rust:
 
+- `String` is an owned buffer of UTF-8 encoded bytes.
 - `&str` is a slice of UTF-8 encoded bytes, similar to `&[u8]`.
-- `String` is an owned buffer of UTF-8 encoded bytes, similar to `Vec<T>`.
 
 <!-- Avoid using fixed integers when slicing since this breaks
 translations. Using the length of s1 and s2 is safe. -->
@@ -37,8 +37,9 @@ fn main() {
   encoded string data stored in a block of memory. String literals (`"Hello"`),
   are stored in the program’s binary.
 
-- Rust's `String` type is a wrapper around a vector of bytes. As with a
-  `Vec<T>`, it is owned.
+- Rust's `String` type is a wrapper around a vector of bytes. The Rust standard 
+  library, including dynamic arrays, will be discussed on day 2. For now, the
+  most important thing to know is that `String`s owned the bytes they contain.
 
 - As with many other types `String::from()` creates a string from a string
   literal; `String::new()` creates a new empty string, to which string data can

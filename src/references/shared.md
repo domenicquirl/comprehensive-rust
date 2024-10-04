@@ -8,8 +8,6 @@ A reference provides a way to access another value without taking ownership of
 the value, and is also called "borrowing". Shared references are read-only, and
 the referenced data cannot change.
 
-<!-- mdbook-xgettext: skip -->
-
 ```rust,editable
 fn main() {
     let a = 'A';
@@ -26,8 +24,6 @@ the `&` operator. The `*` operator "dereferences" a reference, yielding its
 value.
 
 Rust will statically forbid dangling references:
-
-<!-- mdbook-xgettext: skip -->
 
 ```rust,editable,compile_fail
 fn x_axis(x: &i32) -> &(i32, i32) {
@@ -51,15 +47,20 @@ fn x_axis(x: &i32) -> &(i32, i32) {
 - Rust does not automatically create references for you - the `&` is always
   required.
 
-- Rust will auto-dereference in some cases, in particular when invoking methods
-  (try `r.is_ascii()`). There is no need for an `->` operator like in C++.
+- Rust will, however, auto-dereference in some cases, in particular when invoking 
+  methods (try `r.is_ascii()`). There is no need for an `->` operator like in C++.
+
+  The reason that it is OK for the Rust compiler to "just" perform a dereference
+  is that, unlike pointers in C or C++, references in Rust are not allowed to 
+  "dangle" - that is, they always point to a valid value (see below).
 
 - In this example, `r` is mutable so that it can be reassigned (`r = &b`). Note
   that this re-binds `r`, so that it refers to something else. This is different
   from C++, where assignment to a reference changes the referenced value.
 
-- A shared reference does not allow modifying the value it refers to, even if
-  that value was mutable. Try `*r = 'X'`.
+- `r` being mutable does **not** mean that the value that it _references_ can be
+  modified. A shared reference does not allow modifying the value it refers to, 
+  even if that value was mutable. Try `*r = 'X'`.
 
 - Rust is tracking the lifetimes of all references to ensure they live long
   enough. Dangling references cannot occur in safe Rust. `x_axis` would return a
