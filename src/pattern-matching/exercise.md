@@ -16,12 +16,12 @@ Some expressions cannot be evaluated and will return an error. The standard
 type is an enum that represents either a successful value (`Ok(Value)`) or an
 error (`Err(String)`). We will cover this type in detail later.
 
-Copy and paste the code into the Rust playground, and begin implementing `eval`.
+Copy and paste the code into your editor, and begin implementing `eval`.
 The final product should pass the tests. It may be helpful to use `todo!()` and
 get the tests to pass one-by-one. You can also skip a test temporarily with
 `#[ignore]`:
 
-```none
+```rust,no_run
 #[test]
 #[ignore]
 fn test_value() { .. }

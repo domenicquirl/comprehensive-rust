@@ -29,7 +29,7 @@ fn main() {
 <details>
 
 - To implement `Trait` for `Type`, you use an `impl Trait for Type { .. }`
-  block.
+  block. This block can live anywhere in your crate.
 
 - Unlike Go interfaces, just having matching methods is not enough: a `Cat` type
   with a `talk()` method would not automatically satisfy `Pet` unless it is in

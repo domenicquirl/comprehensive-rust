@@ -1,7 +1,8 @@
 # Supertraits
 
 A trait can require that types implementing it also implement other traits,
-called _supertraits_. Here, any type implementing `Pet` must implement `Animal`.
+called _supertraits_. Here, any type implementing `Pet` must also implement
+`Animal`.
 
 ```rust,editable
 trait Animal {

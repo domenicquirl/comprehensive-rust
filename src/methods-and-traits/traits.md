@@ -19,9 +19,10 @@ trait Pet {
 <details>
 
 - A trait defines a number of methods that types must have in order to implement
-  the trait.
+  the trait, without saying anything about what the implementation has to look
+  like (except the function signature).
 
-- In the "Generics" segment, next, we will see how to build functionality that
-  is generic over all types implementing a trait.
+- In the "Generics" segment, next session, we will see how to build functionality 
+  that is generic over all types implementing a trait.
 
 </details>

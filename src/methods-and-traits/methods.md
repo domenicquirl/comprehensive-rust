@@ -52,6 +52,10 @@ fn main() {
 }
 ```
 
+There can be multiple `impl` blocks for the same type, which can be used
+to organize methods into groups. The different `impl` blocks do not have
+to be inside the same file.
+
 The `self` arguments specify the "receiver" - the object the method acts on.
 There are several common receivers for a method:
 

@@ -29,7 +29,8 @@ fn main() {
 <details>
 
 - Associated types are sometimes also called "output types". The key observation
-  is that the implementer, not the caller, chooses this type.
+  is that the implementer, not the caller, chooses this type, but it can only
+  pick one.
 
 - Many standard library traits have associated types, including arithmetic
   operators and `Iterator`.

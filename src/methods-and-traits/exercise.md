@@ -11,7 +11,7 @@ build it would send messages to a log server.
 
 However, the `StderrLogger` given below logs all messages, regardless of
 verbosity. Your task is to write a `VerbosityFilter` type that will ignore
-messages above a maximum verbosity.
+messages above a given maximum verbosity.
 
 This is a common pattern: a struct wrapping a trait implementation and
 implementing that same trait, adding behavior in the process. What other kinds
