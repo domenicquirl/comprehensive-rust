@@ -1,5 +1,5 @@
 ---
-minutes: 4
+minutes: 7
 ---
 
 # Enums
@@ -52,7 +52,6 @@ arm, `half` is bound to the value inside the `Ok` variant. In the second arm,
   match `&result` instead of `result`. That will make `msg` a reference so it
   won't be consumed. This
   ["match ergonomics"](https://rust-lang.github.io/rfcs/2005-match-ergonomics.html)
-  appeared in Rust 2018. If you want to support older Rust, replace `msg` with
-  `ref msg` in the pattern.
+  appeared in Rust 2018. 
 
 </details>
