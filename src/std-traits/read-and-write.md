@@ -43,6 +43,21 @@ fn main() -> Result<()> {
 }
 ```
 
+<details>
+
+- Types that implement `Read` are `File`s, standard input (e.g., from a terminal), 
+  TCP connectiions, etc.
+
+- `Write` is implemented by `File`s, standard output, and other (e.g., TCP) streams
+  as well, but also for `Vec` and (differently) for `String`s.
+
+- The [`Cursor`][4] type can be used to wrap any array of bytes and implements 
+  the `Read` and `Write` traits together with the trait `Seek`, which is often
+  required for `File` operations.
+
+</details>
+
 [1]: https://doc.rust-lang.org/std/io/trait.Read.html
 [2]: https://doc.rust-lang.org/std/io/trait.BufRead.html
 [3]: https://doc.rust-lang.org/std/io/trait.Write.html
+[4]: https://doc.rust-lang.org/std/io/struct.Cursor.html

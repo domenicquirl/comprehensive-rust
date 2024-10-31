@@ -18,7 +18,8 @@ fn main() {
 
 The results of `as` are _always_ defined in Rust and consistent across
 platforms. This might not match your intuition for changing sign or casting to a
-smaller type -- check the docs, and comment for clarity.
+smaller type -- check [the docs](https://doc.rust-lang.org/reference/expressions/operator-expr.html#semantics), 
+and comment for clarity.
 
 Casting with `as` is a relatively sharp tool that is easy to use incorrectly,
 and can be a source of subtle bugs as future maintenance work changes the types

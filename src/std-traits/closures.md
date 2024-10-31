@@ -33,6 +33,10 @@ fn main() {
 }
 ```
 
+Closures can _capture_ values from the surrounding scope without making them an
+explicit function parameter. For example, the `add_3` closure captures `n` from
+the environment so it can add it to `x`.
+
 <details>
 
 An `Fn` (e.g. `add_3`) neither consumes nor mutates captured values. It can be

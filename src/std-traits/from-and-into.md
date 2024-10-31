@@ -29,6 +29,11 @@ fn main() {
 }
 ```
 
+If it's only possible to convert some, but not all values of one type into 
+another, the standard library also provides a version of these traits for
+fallible conversions called [`TryFrom`][3] and [`TryInto`][4], which return
+a `Result` instead.
+
 <details>
 
 - That's why it is common to only implement `From`, as your type will get `Into`
@@ -42,3 +47,5 @@ fn main() {
 
 [1]: https://doc.rust-lang.org/std/convert/trait.From.html
 [2]: https://doc.rust-lang.org/std/convert/trait.Into.html
+[3]: https://doc.rust-lang.org/std/convert/trait.TryFrom.html
+[4]: https://doc.rust-lang.org/std/convert/trait.TryInto.html
