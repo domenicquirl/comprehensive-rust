@@ -1,5 +1,5 @@
 ---
-minutes: 10
+minutes: 5
 ---
 
 # Option
@@ -23,7 +23,9 @@ fn main() {
 
 <details>
 
-- `Option` is widely used, not just in the standard library.
+- `Option` is widely used, not just in the standard library. Remember that values
+  in Rust cannot be `null`, so the primary way to get an optional value is to 
+  wrap it in an `Option`.
 - `unwrap` will return the value in an `Option`, or panic. `expect` is similar
   but takes an error message.
   - You can panic on None, but you can't "accidentally" forget to check for

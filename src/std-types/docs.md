@@ -34,10 +34,14 @@ automatically documented at [`docs.rs`](https://docs.rs) using the
 idiomatic to document all public items in an API using this pattern.
 
 To document an item from inside the item (such as inside a module), use `//!` or
-`/*! .. */`, called "inner doc comments":
+`/*! .. */`, called "inner doc comments". As an example, the two comments below
+are equivalent:
 
 ```rust,editable
-//! This module contains functionality relating to divisibility of integers.
+/// This module contains functionality relating to divisibility of integers.
+mod div_int {
+    //! This module contains functionality relating to divisibility of integers.
+}
 ```
 
 <details>
