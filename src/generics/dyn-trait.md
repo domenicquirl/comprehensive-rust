@@ -1,5 +1,5 @@
 ---
-minutes: 5
+minutes: 10
 ---
 
 # `dyn Trait`
@@ -63,13 +63,15 @@ fn main() {
   information and can resolve which type's trait implementation to use.
 
 - When using `dyn Trait`, it instead uses dynamic dispatch through a
-  [virtual method table][vtable] (vtable). This means that there's a single
-  version of `fn dynamic` that is used regardless of what type of `Pet` is
-  passed in.
+  [virtual method table][vtable] (vtable). This is the same mechanism that is
+  commonly used for classes in OO languages where there's a single version 
+  of `fn dynamic` that is used regardless of what type of `Pet` is passed in.
 
-- When using `dyn Trait`, the trait object needs to be behind some kind of
-  indirection. In this case it's a reference, though smart pointer types like
-  `Box` can also be used (this will be demonstrated on day 3).
+- Because - in contrast to `impl Trait` / generics - when using `dyn Trait` the
+  actual underlying type of the function argument implementing the trait is not
+  known, trait objects always needs to be behind some kind of indirection. In 
+  this case it's a reference, though smart pointer types like `Box` can also be 
+  used (this will be demonstrated on day 3).
 
 - At runtime, a `&dyn Pet` is represented as a "fat pointer", i.e. a pair of two
   pointers: One pointer points to the concrete object that implements `Pet`, and

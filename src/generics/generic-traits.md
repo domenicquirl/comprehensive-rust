@@ -1,5 +1,5 @@
 ---
-Minutes: 5
+minutes: 5
 ---
 
 # Generic Traits
@@ -32,7 +32,7 @@ fn main() {
 
 <details>
 
-- The `From` trait will be covered later in the course, but its
+- The `From` trait will be covered later today, but its 
   [definition in the `std` docs](https://doc.rust-lang.org/std/convert/trait.From.html)
   is simple.
 
@@ -40,9 +40,10 @@ fn main() {
   parameters. Here, `Foo::from("hello")` would not compile because there is no
   `From<&str>` implementation for `Foo`.
 
-- Generic traits take types as "input", while associated types are a kind of
-  "output" type. A trait can have multiple implementations for different input
-  types.
+- Generic traits take types as "input", somewhat like passing parameters to a 
+  function, while associated types are a kind of "output" or return type. 
+  A trait can have multiple implementations for different input types, but each
+  implementation can only select ("return") one output type.
 
 - In fact, Rust requires that at most one implementation of a trait match for
   any type T. Unlike some other languages, Rust has no heuristic for choosing

@@ -35,6 +35,7 @@ fn main() {
 
 - Generic code is turned into non-generic code based on the call sites. This is
   a zero-cost abstraction: you get exactly the same result as if you had
-  hand-coded the data structures without the abstraction.
+  hand-coded the data structures without the abstraction because the code is
+  _monomorphized_.
 
 </details>

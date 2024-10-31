@@ -25,6 +25,9 @@ fn main() {
 
 <details>
 
+- The `T: Trait` syntax is the same as used to specify 
+  [supertraits](../methods-and-traits/traits/supertraits.md) (like `Pet: Animal`).
+
 - Try making a `NonClonable` and passing it to `duplicate`.
 
 - When multiple traits are necessary, use `+` to join them.

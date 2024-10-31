@@ -4,7 +4,7 @@ minutes: 10
 
 # Generic Data Types
 
-You can use generics to abstract over the concrete field type:
+You can use also generics to abstract over the concrete type of a `struct` field:
 
 ```rust,editable
 #[derive(Debug)]
