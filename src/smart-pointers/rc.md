@@ -19,6 +19,10 @@ fn main() {
 }
 ```
 
+- Like `Box<T>`, `Rc<T>` implements `Deref<Target = T>`. For smart pointer types,
+  we usually write `Rc::clone(&a)` instead of `a.clone()` to unambiguously refer
+  to the `Clone` implementation of the smart pointer (`Rc`) instead of `T`'s 
+  implementation.
 - See [`Arc`][2] and [`Mutex`][3] if you are in a multi-threaded context.
 - You can _downgrade_ a shared pointer into a [`Weak`][4] pointer to create
   cycles that will get dropped.

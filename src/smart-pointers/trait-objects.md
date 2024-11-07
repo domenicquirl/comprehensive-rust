@@ -82,6 +82,9 @@ Memory layout after allocating `pets`:
 
 - Types that implement a given trait may be of different sizes. This makes it
   impossible to have things like `Vec<dyn Pet>` in the example above.
+  - Having a `Vec<Box<dyn Trait>>` is the only "open" way to store multiple
+    different types in a collection. The "closed" alternative to this is using
+    an `enum` with a fixed set of possible variants.
 - `dyn Pet` is a way to tell the compiler about a dynamically sized type that
   implements `Pet`.
 - In the example, `pets` is allocated on the stack and the vector data is on the

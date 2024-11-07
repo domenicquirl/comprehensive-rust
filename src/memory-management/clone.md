@@ -1,5 +1,5 @@
 ---
-minutes: 2
+minutes: 3
 ---
 
 # Clone

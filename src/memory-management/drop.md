@@ -37,7 +37,9 @@ fn main() {
 <details>
 
 - Note that `std::mem::drop` is not the same as `std::ops::Drop::drop`.
-- Values are automatically dropped when they go out of scope.
+- Values are automatically dropped when they go out of scope. 
+  - They are dropped in reverse declaration order, meaning the first value that
+    is dropped will be that of the most recently defined variable.
 - When a value is dropped, if it implements `std::ops::Drop` then its
   `Drop::drop` implementation will be called.
 - All its fields will then be dropped too, whether or not it implements `Drop`.
