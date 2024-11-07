@@ -1,5 +1,5 @@
 [book]
-authors      = ["Martin Geisler"]
+authors      = ["Domenic Quirl", "Martin Geisler"]
 language     = "en"
 multilingual = false
 src          = "src"

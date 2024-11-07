@@ -70,7 +70,7 @@ What remains for you is to implement the `parse_field` function and the
 - In this exercise there are various cases where protobuf parsing might fail,
   e.g. if you try to parse an `i32` when there are fewer than 4 bytes left in
   the data buffer. In normal Rust code we'd handle this with the `Result` enum,
-  but for simplicity in this exercise we panic if any errors are encountered. On
-  day 4 we'll cover error handling in Rust in more detail.
+  but for simplicity in this exercise we panic if any errors are encountered. In
+  session 8 we'll cover error handling in Rust in more detail.
 
 </details>

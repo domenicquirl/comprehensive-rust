@@ -37,7 +37,7 @@ fn x_axis(x: &i32) -> &(i32, i32) {
 - A reference is said to "borrow" the value it refers to, and this is a good
   model for students not familiar with pointers: code can use the reference to
   access the value, but is still "owned" by the original variable. The course
-  will get into more detail on ownership in day 3.
+  will get into more detail on ownership in sessions 5 and 6.
 
 - References are implemented as pointers, and a key advantage is that they can
   be much smaller than the thing they point to. Students familiar with C or C++

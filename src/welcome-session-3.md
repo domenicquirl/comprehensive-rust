@@ -1,20 +1,18 @@
 ---
 minutes: 3
 course: Fundamentals
-session: Day 2 Morning
+session: Session 3 - Pattern Matching and Traits
 target_minutes: 180
 ---
 
-# Welcome to Day 2
+# Welcome to Session 3
 
-Now that we have seen a fair amount of Rust, today will focus on Rust's type
+Now that we have seen a fair amount of Rust, we will focus on Rust's type
 system:
 
 - Pattern matching: extracting data from structures.
 - Methods: associating functions with types.
 - Traits: behaviors shared by multiple types.
-- Generics: parameterizing types on other types.
-- Standard library types and traits: a tour of Rust's rich standard library.
 
 ## Schedule
 

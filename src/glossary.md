@@ -140,7 +140,7 @@ h1#glossary ~ ul > li:first-line {
   A systems programming language that focuses on safety, performance, and
   concurrency.
 - Rust Fundamentals:\
-  Days 1 to 4 of this course.
+  Sessions 1 to 8 of this course.
 - safe:\
   Refers to code that adheres to Rust's ownership and borrowing rules,
   preventing memory-related errors.

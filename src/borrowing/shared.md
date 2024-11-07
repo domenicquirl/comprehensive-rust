@@ -30,7 +30,7 @@ fn main() {
 
 <details>
 
-This slide is a review of the material on references from day 1, expanding
+This slide is a review of the material on references from session 2, expanding
 slightly to include function arguments and return values.
 
 # More to Explore

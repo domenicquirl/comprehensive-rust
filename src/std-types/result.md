@@ -39,7 +39,7 @@ fn main() {
 - `Result` documentation is a recommended read. Not during the course, but it is
   worth mentioning. It contains a lot of convenience methods and functions that
   help functional-style programming.
-- `Result` is the standard type to implement error handling as we will see on
-  Day 4.
+- `Result` is the standard type to implement error handling as we will see in
+  session 8.
 
 </details>

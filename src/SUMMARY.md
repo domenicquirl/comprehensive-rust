@@ -12,9 +12,9 @@
 
 ---
 
-# Day 1: Morning
+# Session 1: Hello World
 
-- [Welcome](welcome-day-1.md)
+- [Welcome](welcome-session-1.md)
 - [Hello, World](hello-world.md)
   - [What is Rust?](hello-world/what-is-rust.md)
   - [Benefits of Rust](hello-world/benefits.md)
@@ -41,9 +41,9 @@
   - [Exercise: Collatz Sequence](control-flow-basics/exercise.md)
     - [Solution](control-flow-basics/solution.md)
 
-# Day 1: Afternoon
+# Session 2: Types
 
-- [Welcome](welcome-day-1-afternoon.md)
+- [Welcome](welcome-session-2.md)
 - [Tuples and Arrays](tuples-and-arrays.md)
   - [Arrays](tuples-and-arrays/arrays.md)
   - [Tuples](tuples-and-arrays/tuples.md)
@@ -70,9 +70,9 @@
 
 ---
 
-# Day 2: Morning
+# Session 3: Pattern Matching and Traits
 
-- [Welcome](welcome-day-2.md)
+- [Welcome](welcome-session-3.md)
 - [Pattern Matching](pattern-matching.md)
   - [Matching Values](pattern-matching/match.md)
   - [Destructuring Structs](pattern-matching/destructuring-structs.md)
@@ -93,9 +93,9 @@
   - [Exercise: Generic Logger](methods-and-traits/exercise.md)
     - [Solution](methods-and-traits/solution.md)
 
-# Day 2: Afternoon
+# Session 4: Standard Library
 
-- [Welcome](welcome-day-2-afternoon.md)
+- [Welcome](welcome-session-4.md)
 - [Generics](generics.md)
   - [Generic Functions](generics/generic-functions.md)
   - [Generic Data Types](generics/generic-data.md)
@@ -128,9 +128,9 @@
 
 ---
 
-# Day 3: Morning
+# Session 5: Memory
 
-- [Welcome](welcome-day-3.md)
+- [Welcome](welcome-session-5.md)
 - [Memory Management](memory-management.md)
   - [Review of Program Memory](memory-management/review.md)
   - [Approaches to Memory Management](memory-management/approaches.md)
@@ -148,9 +148,9 @@
   - [Exercise: Binary Tree](smart-pointers/exercise.md)
     - [Solution](smart-pointers/solution.md)
 
-# Day 3: Afternoon
+# Session 6: Lifetimes and the Borrow Checker
 
-- [Welcome](welcome-day-3-afternoon.md)
+- [Welcome](welcome-session-6.md)
 - [Borrowing](borrowing.md)
   - [Borrowing a Value](borrowing/shared.md)
   - [Borrow Checking](borrowing/borrowck.md)
@@ -167,9 +167,9 @@
 
 ---
 
-# Day 4: Morning
+# Session 7: Code Organization
 
-- [Welcome](welcome-day-4.md)
+- [Welcome](welcome-session-7.md)
 - [Iterators](iterators.md)
   - [`Iterator`](iterators/iterator.md)
   - [`IntoIterator`](iterators/intoiterator.md)
@@ -190,9 +190,9 @@
   - [Exercise: Luhn Algorithm](testing/exercise.md)
     - [Solution](testing/solution.md)
 
-# Day 4: Afternoon
+# Session 8: Error Handling and Unsafe Rust
 
-- [Welcome](welcome-day-4-afternoon.md)
+- [Welcome](welcome-session-8.md)
 - [Error Handling](error-handling.md)
   - [Panics](error-handling/panics.md)
   - [`Result`](error-handling/result.md)

@@ -1,20 +1,18 @@
 ---
 minutes: 5
 course: Fundamentals
-session: Day 1 Morning
+session: Session 1 - Hello World
 target_minutes: 180
 ---
 
-# Welcome to Day 1
+# Welcome to Session 1
 
-This is the first day of Rust Fundamentals. We will cover a lot of ground today:
+This is the first session of Rust Fundamentals. We will cover a lot of ground today:
 
 - Basic Rust syntax: variables, scalar and compound types, enums, structs,
   references, functions, and methods.
 - Types and type inference.
 - Control flow constructs: loops, conditionals, and so on.
-- User-defined types: structs and enums.
-- Pattern matching: destructuring enums, structs, and arrays.
 
 ## Schedule
 

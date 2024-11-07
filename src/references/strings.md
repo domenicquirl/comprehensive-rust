@@ -38,7 +38,7 @@ fn main() {
   are stored in the program’s binary.
 
 - Rust's `String` type is a wrapper around a vector of bytes. The Rust standard 
-  library, including dynamic arrays, will be discussed on day 2. For now, the
+  library, including dynamic arrays, will be discussed in session 4. For now, the
   most important thing to know is that `String`s owned the bytes they contain.
 
 - As with many other types `String::from()` creates a string from a string

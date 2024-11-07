@@ -71,7 +71,7 @@ fn main() {
   actual underlying type of the function argument implementing the trait is not
   known, trait objects always needs to be behind some kind of indirection. In 
   this case it's a reference, though smart pointer types like `Box` can also be 
-  used (this will be demonstrated on day 3).
+  used (this will be demonstrated in session 5).
 
 - At runtime, a `&dyn Pet` is represented as a "fat pointer", i.e. a pair of two
   pointers: One pointer points to the concrete object that implements `Pet`, and

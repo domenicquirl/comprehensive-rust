@@ -4,14 +4,14 @@
 
 ## Rust Fundamentals
 
-The first four days make up [Rust Fundamentals](../welcome-day-1.md). The days
+The first eight sessions make up [Rust Fundamentals](../welcome-session-1.md). The days
 are fast paced and we cover a lot of ground!
 
 {{%course outline Fundamentals}}
 
 ## Deep Dives
 
-In addition to the 4-day class on Rust Fundamentals, we cover some more
+In addition to the 8-session class on Rust Fundamentals, we cover some more
 specialized topics:
 
 ### Bare-Metal Rust
