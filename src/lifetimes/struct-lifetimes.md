@@ -4,7 +4,8 @@ minutes: 5
 
 # Lifetimes in Data Structures
 
-If a data type stores borrowed data, it must be annotated with a lifetime:
+If a data type stores borrowed data, that is, if you want to put a reference
+into a struct or similar, it must be annotated with a lifetime:
 
 ```rust,editable
 #[derive(Debug)]
@@ -34,7 +35,6 @@ fn main() {
 - Types with borrowed data force users to hold on to the original data. This can
   be useful for creating lightweight views, but it generally makes them somewhat
   harder to use.
-- When possible, make data structures own their data directly.
 - Some structs with multiple references inside can have more than one lifetime
   annotation. This can be necessary if there is a need to describe lifetime
   relationships between the references themselves, in addition to the lifetime

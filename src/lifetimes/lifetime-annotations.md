@@ -4,17 +4,23 @@ minutes: 10
 
 # Lifetime Annotations
 
-A reference has a _lifetime_, which must not "outlive" the value it refers to.
-This is verified by the borrow checker.
+Every Rust reference is associated with a _lifetime_, which is the part of the 
+program where the reference is valid and can be safely used to access the 
+underlying value.
 
-The lifetime can be implicit - this is what we have seen so far. Lifetimes can
-also be explicit: `&'a Point`, `&'document str`. Lifetimes start with `'` and
-`'a` is a typical default name. Read `&'a Point` as "a borrowed `Point` which is
-valid for at least the lifetime `a`".
+A reference must not "outlive" the value it refers to (otherwise you could have
+use-after-free errors when dereferencing the reference). This is verified by the 
+borrow checker.
 
-Lifetimes are always inferred by the compiler: you cannot assign a lifetime
-yourself. Explicit lifetime annotations create constraints where there is
-ambiguity; the compiler verifies that there is a valid solution.
+Often, the lifetime of a reference doesn't need to be named and can be 
+implicit - this is what we have seen so far. But lifetimes can also be 
+explicitly annotated: `&'a Point`, `&'document str`. Lifetime names start 
+with `'` and `'a` is a typical default name. Read `&'a Point` as "a borrowed 
+`Point` which is valid for at least the lifetime `a`".
+
+The exact value of lifetimes is always inferred by the compiler: you cannot 
+assign to a lifetime yourself. Explicit lifetime annotations create constraints 
+where there is ambiguity; the compiler verifies that there is a valid solution.
 
 Lifetimes become more complicated when considering passing values to and
 returning values from functions.
@@ -50,14 +56,16 @@ Looking inside the function body shows that it can only safely assume that
 requires explicit annotations of lifetimes on function arguments and return
 values.
 
-Add `'a` appropriately to `left_most`:
+Add `'a` appropriately to `left_most` and note how it is introduced with the 
+same syntax as generic parameters:
 
 ```rust,ignore
 fn left_most<'a>(p1: &'a Point, p2: &'a Point) -> &'a Point {
 ```
 
-This says, "given p1 and p2 which both outlive `'a`, the return value lives for
-at least `'a`.
+This says, "given p1 and p2 which are both valid for at least `'a`, the return 
+value is also valid for at least `'a`. Because the function is generic over `'a`,
+the code will compile for any two references you pass in.
 
 In common cases, lifetimes can be elided, as described on the next slide.
 
