@@ -15,6 +15,7 @@ mod foo {
     }
 }
 
+/// Important stuff for bar-ing.
 mod bar {
     pub fn do_something() {
         println!("In the bar module");
@@ -29,10 +30,12 @@ fn main() {
 
 <details>
 
-- Packages provide functionality and include a `Cargo.toml` file that describes
-  how to build a bundle of 1+ crates.
-- Crates are a tree of modules, where a binary crate creates an executable and a
+There are 3 hierarchical levels on which code can be organized in Rust.
+
+- _Packages_ provide functionality and include a `Cargo.toml` file that describes
+  how to build a bundle of 1 or more _crates_.
+- _Crates_ are a tree of _modules_, where a binary crate creates an executable and a
   library crate compiles to a library.
-- Modules define organization, scope, and are the focus of this section.
+- _Modules_ define organization, scope, and are the focus of this section.
 
 </details>

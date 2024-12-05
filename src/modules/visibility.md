@@ -40,7 +40,7 @@ fn main() {
 
 <details>
 
-- Use the `pub` keyword to make modules public.
+Use the `pub` keyword to make modules, functions or structs public.
 
 Additionally, there are advanced `pub(...)` specifiers to restrict the scope of
 public visibility.
@@ -51,5 +51,8 @@ public visibility.
 - Less commonly, you can give visibility to a specific path.
 - In any case, visibility must be granted to an ancestor module (and all of its
   descendants).
+- Visibility qualifiers can also be applied to individual struct fields, so
+  code outside the module can only access some of the fields (like `public` 
+  vs. `private` members in C++ or `private` fields in Java).
 
 </details>

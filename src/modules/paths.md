@@ -1,5 +1,5 @@
 ---
-minutes: 8
+minutes: 10
 ---
 
 # use, super, self
@@ -12,7 +12,7 @@ use std::collections::HashSet;
 use std::process::abort;
 ```
 
-## Paths
+### Paths
 
 Paths are resolved as follows:
 
@@ -23,6 +23,28 @@ Paths are resolved as follows:
 2. As an absolute path:
    - `crate::foo` refers to `foo` in the root of the current crate,
    - `bar::foo` refers to `foo` in the `bar` crate.
+
+### Re-Exports
+
+Visibility qualifiers can be applied to `use` statements to _re-export_ the 
+`use`d items and make them accessible as part of the re-exporting module.
+Imported items can be renamed with the `as` keyword.
+
+```rust,editable
+// bar.rs
+mod foo {
+    pub(super) mod inner {
+        pub(crate) struct Bar;
+        pub(crate) struct Baz;
+    }
+}
+
+// Make `Bar` accessible as `crate::bar::Bar`.
+pub use foo::inner::Bar;
+
+// Make `Baz` accessible as `crate::bar::MyBaz` within the current crate.
+pub(crate) foo::inner::Baz as MyBaz;
+```
 
 <details>
 

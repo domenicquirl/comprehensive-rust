@@ -16,7 +16,7 @@ fn main() {
 
 <details>
 
-`Iterator` implements
+The `Iterator` trait provides the function
 
 ```rust,ignore
 fn collect<B>(self) -> B

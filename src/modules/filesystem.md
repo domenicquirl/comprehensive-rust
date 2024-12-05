@@ -12,7 +12,9 @@ mod garden;
 
 This tells rust that the `garden` module content is found at `src/garden.rs`.
 Similarly, a `garden::vegetables` module can be found at
-`src/garden/vegetables.rs`.
+`src/garden/vegetables.rs`. If the `garden` module contains multiple modules / 
+files itself, the source file for the `garden` module can alternatively be
+placed under `src/garden/mod.rs` next to the submodules of the `garden` module.
 
 The `crate` root is in:
 
@@ -43,11 +45,12 @@ pub fn harvest(garden: &mut Garden) {
 
 <details>
 
-- Before Rust 2018, modules needed to be located at `module/mod.rs` instead of
-  `module.rs`, and this is still a working alternative for editions after 2018.
+- Before Rust 2018, the compiler only supported `module/mod.rs` instead of `module.rs`.
 
 - The main reason to introduce `filename.rs` as alternative to `filename/mod.rs`
-  was because many files named `mod.rs` can be hard to distinguish in IDEs.
+  was because many files named `mod.rs` can be hard to distinguish in IDEs. Some
+  IDEs provide settings to customize how tabs for these files are shown, e.g.
+  [VS Code](https://code.visualstudio.com/updates/v1_88#_custom-labels-for-open-editors).
 
 - Deeper nesting can use folders, even if the main module is a file:
 

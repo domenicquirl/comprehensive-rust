@@ -43,11 +43,16 @@ mod tests {
 }
 ```
 
-- This lets you unit test private helpers.
+- Because the unit tests live in the same module as the code under test, this 
+  lets you unit test private functions and access private fields of structs 
+  from that module.
 - The `#[cfg(test)]` attribute is only active when you run `cargo test`.
 
 <details>
 
 Run the tests in the playground in order to show their results.
+
+- If you put the `tests` module in its own file (as seen in the last section),
+  less code will need to be recompiled when editing a test.
 
 </details>

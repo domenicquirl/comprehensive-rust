@@ -21,15 +21,21 @@ fn main() {
 
 <details>
 
+The `deny` in this example means that we want Clippy to error if the lint fires.
+You can also specify `warn` or `expect` to make it emit a warning or to acknowledge
+and silence a lint, respectively.
+
 Run the code sample and examine the error message. There are also lints visible
 here, but those will not be shown once the code compiles. Switch to the
 Playground site to show those lints.
 
 After resolving the lints, run `clippy` on the playground site to show clippy
-warnings. Clippy has extensive documentation of its lints, and adds new lints
+warnings. Clippy has [extensive documentation][1] of its lints, and adds new lints
 (including default-deny lints) all the time.
 
-Note that errors or warnings with `help: ...` can be fixed with `cargo fix` or
-via your editor.
+Note that errors or warnings with `help: try ...` can be fixed with `cargo fix` 
+or via your editor / IDE.
+
+[1]: https://rust-lang.github.io/rust-clippy/stable/index.html
 
 </details>
