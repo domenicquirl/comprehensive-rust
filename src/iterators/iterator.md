@@ -5,8 +5,10 @@ minutes: 5
 # `Iterator`
 
 The [`Iterator`][1] trait supports iterating over values in a collection. It
-requires a `next` method and provides lots of methods. Many standard library
-types implement `Iterator`, and you can implement it yourself, too:
+requires you to implement a `next` method that yields the next iterator value
+and in exchange provides lots of useful methods to customize using the iterator. 
+Many standard library types implement `Iterator`, and you can implement it 
+yourself, too:
 
 ```rust,editable
 struct Fibonacci {

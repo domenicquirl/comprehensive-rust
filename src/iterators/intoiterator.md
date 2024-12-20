@@ -4,11 +4,11 @@ minutes: 10
 
 # `IntoIterator`
 
-The `Iterator` trait tells you how to _iterate_ once you have created an
-iterator. The related trait
+The `Iterator` trait tells you how to iterate and get the next value once you 
+have created an iterator. The related trait
 [`IntoIterator`](https://doc.rust-lang.org/std/iter/trait.IntoIterator.html)
-defines how to create an iterator for a type. It is used automatically by the
-`for` loop.
+defines how to create an iterator from a given type. `IntoIterator` is what
+`for` loops use in Rust to, for example, convert a `Vec` into an `Iterator`.
 
 ```rust,editable
 struct Grid {
@@ -48,7 +48,10 @@ impl Iterator for GridIter {
 }
 
 fn main() {
-    let grid = Grid { x_coords: vec![3, 5, 7, 9], y_coords: vec![10, 20, 30, 40] };
+    let grid = Grid { 
+        x_coords: vec![3, 5, 7, 9], 
+        y_coords: vec![10, 20, 30, 40] 
+    };
     for (x, y) in grid {
         println!("point = {x}, {y}");
     }
