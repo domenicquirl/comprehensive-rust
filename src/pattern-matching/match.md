@@ -5,9 +5,8 @@ minutes: 10
 # Matching Values
 
 The `match` keyword lets you match a value against one or more _patterns_. The
-comparisons are done from top to bottom and the first match wins.
-
-The patterns can be simple values, similarly to `switch` in C and C++:
+patterns can be simple values, similarly to `switch` in C and C++, but they can
+also be used to express more complex conditions:
 
 ```rust,editable
 #[rustfmt::skip]
@@ -32,9 +31,10 @@ same type. The type is the last expression of the block, if any. In the example
 above, the type is `()`.
 
 A variable in the pattern (`key` in this example) will create a binding that can
-be used within the match arm.
+be used within the match arm. We will learn more about this on the next slide.
 
-A match guard causes the arm to match only if the condition is true.
+A match guard causes the arm to match only if the condition is true. If the
+condition is false the match will continue checking later cases.
 
 <details>
 
@@ -55,5 +55,25 @@ Key Points:
   result in other arms of the original `match` expression being considered.
 - The condition defined in the guard applies to every expression in a pattern
   with an `|`.
+
+# More To Explore
+
+- Another piece of pattern syntax you can show students is the `@` syntax which
+  binds a part of a pattern to a variable. For example:
+
+  ```rust
+  let opt = Some(123);
+  match opt {
+      outer @ Some(inner) => {
+          println!("outer: {outer:?}, inner: {inner}");
+      }
+      None => {}
+  }
+  ```
+
+  In this example `inner` has the value 123 which it pulled from the `Option`
+  via destructuring, `outer` captures the entire `Some(inner)` expression, so it
+  contains the full `Option::Some(123)`. This is rarely used but can be useful
+  in more complex patterns.
 
 </details>

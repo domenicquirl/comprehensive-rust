@@ -40,10 +40,11 @@ mod foo {
 }
 
 // Make `Bar` accessible as `crate::bar::Bar`.
-pub use foo::inner::Bar;
+// This will error, because `Bar` can at most be `pub(crate)`.
+// pub use foo::inner::Bar;
 
 // Make `Baz` accessible as `crate::bar::MyBaz` within the current crate.
-pub(crate) foo::inner::Baz as MyBaz;
+pub(crate) use foo::inner::Baz as MyBaz;
 ```
 
 <details>

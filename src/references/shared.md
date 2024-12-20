@@ -23,16 +23,9 @@ A shared reference to a type `T` has type `&T`. A reference value is made with
 the `&` operator. The `*` operator "dereferences" a reference, yielding its
 value.
 
-Rust will statically forbid dangling references:
-
-```rust,editable,compile_fail
-fn x_axis(x: &i32) -> &(i32, i32) {
-    let point = (*x, 0);
-    return &point;
-}
-```
-
 <details>
+
+- References can never be null in Rust, so null checking is not necessary.
 
 - A reference is said to "borrow" the value it refers to, and this is a good
   model for students not familiar with pointers: code can use the reference to

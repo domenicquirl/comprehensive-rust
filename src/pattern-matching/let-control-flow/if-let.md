@@ -31,6 +31,8 @@ which does nothing for any other pattern:
 
 ```rust
 // Long version of the above:
+use std::time::Duration;
+
 fn sleep_for(secs: f32) {
     match Duration::try_from_secs_f32(secs) {
         Ok(dur) => {

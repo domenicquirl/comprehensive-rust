@@ -40,14 +40,9 @@ fn nearest<'a>(points: &'a [Point], query: &Point) -> Option<&'a Point> {
     nearest.map(|(p, _)| p)
 }
 
-fn main() {
-    println!(
-        "{:?}",
-        nearest(
-            &[Point(1, 0), Point(1, 0), Point(-1, 0), Point(0, -1),],
-            &Point(0, 2)
-        )
-    );
+fn main() {    
+    let points = &[Point(1, 0), Point(1, 0), Point(-1, 0), Point(0, -1)];
+    println!("{:?}", nearest(points, &Point(0, 2)));
 }
 ```
 

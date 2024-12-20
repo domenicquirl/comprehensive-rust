@@ -42,7 +42,6 @@
 </td>
 <td>
 
-- `Error`
 - `HashMap`
 - `Mutex`, `Condvar`, `Barrier`, `Once`, `RwLock`, `mpsc`
 - `File` and the rest of `fs`
