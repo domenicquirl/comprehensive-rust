@@ -13,7 +13,10 @@ return value.
 
 ```rust
 {{#include exercise.rs:offset_differences}}
-    unimplemented!()
+    values
+        .iter()
+        // TODO: add adapters to obtain the desired result
+        .collect()
 }
 
 {{#include exercise.rs:unit-tests}}
