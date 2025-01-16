@@ -1,5 +1,5 @@
 ---
-minutes: 5
+minutes: 2
 ---
 
 # Implementing Unsafe Traits

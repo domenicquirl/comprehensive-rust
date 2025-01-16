@@ -76,10 +76,11 @@ fn main() {
 The `?` operator must return a value compatible with the return type of the
 function. For `Result`, it means that the error types have to be compatible. A
 function that returns `Result<T, ErrorOuter>` can only use `?` on a value of
-type `Result<U, ErrorInner>` if `ErrorOuter` and `ErrorInner` are the same type
-or if `ErrorOuter` implements `From<ErrorInner>`.
+type `Result<U, ErrorInner>` if `ErrorOuter` implements `From<ErrorInner>` 
+(in particular, this is always true if `ErrorOuter` and `ErrorInner` are the 
+same type).
 
-A common alternative to a `From` implementation is `Result::map_err`, especially
+A common alternative to a `From` implementation is [`Result::map_err`], especially
 when the conversion only happens in one place.
 
 There is no compatibility requirement for `Option`. A function returning
@@ -87,7 +88,13 @@ There is no compatibility requirement for `Option`. A function returning
 types.
 
 A function that returns `Result` cannot use `?` on `Option` and vice versa.
-However, `Option::ok_or` converts `Option` to `Result` whereas `Result::ok`
-turns `Result` into `Option`.
+However, [`Option::ok_or`] and [`Option::ok_or_else`] convert an `Option` to a 
+`Result` whereas [`Result::ok`] turns a `Result` into an `Option` (returning 
+`None` on error).
+
+[`Result::map_err`]: https://doc.rust-lang.org/std/result/enum.Result.html#method.map_err
+[`Option::ok_or`]: https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or
+[`Option::ok_or_else`]: https://doc.rust-lang.org/std/option/enum.Option.html#method.ok_or_else
+[`Result::ok`]: https://doc.rust-lang.org/std/result/enum.Result.html#method.ok
 
 </details>

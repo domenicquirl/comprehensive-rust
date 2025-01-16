@@ -35,9 +35,9 @@ fn main() {
 
 <details>
 
-It is good practice (and required by the Android Rust style guide) to write a
-comment for each `unsafe` block explaining how the code inside it satisfies the
-safety requirements of the unsafe operations it is doing.
+It is good practice to write a comment for each `unsafe` block explaining how 
+the code inside it satisfies the safety requirements of the unsafe operations 
+it is doing.
 
 In the case of pointer dereferences, this means that the pointers must be
 [_valid_](https://doc.rust-lang.org/std/ptr/index.html#safety), i.e.:
@@ -47,12 +47,13 @@ In the case of pointer dereferences, this means that the pointers must be
   object).
 - The object must not have been deallocated.
 - There must not be concurrent accesses to the same location.
-- If the pointer was obtained by casting a reference, the underlying object must
-  be live and no reference may be used to access the memory.
+- If the pointer was obtained by casting a reference, 
+  - the underlying object must be live 
+  - and no reference may be used to access the memory.
 
 In most cases the pointer must also be properly aligned.
 
-The "NOT SAFE" section gives an example of a common kind of UB bug: `*r1` has
+The "NOT SAFE" section gives an example of a common kind of UB bug: `&*r1` has
 the `'static` lifetime, so `r3` has type `&'static String`, and thus outlives
 `s`. Creating a reference from a pointer requires _great care_.
 
