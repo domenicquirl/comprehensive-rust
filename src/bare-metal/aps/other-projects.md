@@ -15,7 +15,9 @@
 <details>
 
 - The RaspberryPi OS tutorial runs Rust code before the MMU and caches are
-  enabled. This will read and write memory (e.g. the stack). However:
+  enabled. This will read and write memory (e.g. the stack). However, this has
+  the problems mentioned at the beginning of this session regarding unaligned
+  access and cache coherency.
   - Without the MMU and cache, unaligned accesses will fault. It builds with
     `aarch64-unknown-none` which sets `+strict-align` to prevent the compiler
     generating unaligned accesses so it should be alright, but this is not
